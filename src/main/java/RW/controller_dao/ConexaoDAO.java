@@ -260,7 +260,7 @@ public class ConexaoDAO {
         boolean duplicate = false;
         Conexao conexao = new Conexao();
         Connection conn = conexao.conectar();
-        PreparedStatement p = conn.prepareStatement("SELECT cod_usuario FROM users WHERE cod_verificacao = ? LIMIT 1");
+        PreparedStatement p = conn.prepareStatement("SELECT co    d_usuario FROM users WHERE cod_verificacao = ? LIMIT 1");
         p.setString(1, code);
         ResultSet r = p.executeQuery();
         if (r.next()) {
